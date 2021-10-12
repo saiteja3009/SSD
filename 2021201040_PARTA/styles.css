@@ -1,0 +1,72 @@
+#myimg{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+body{
+    
+    color:whitesmoke;
+    background-image: url("images/back.jpg");
+}
+
+#projects{
+font-family:Arial, Helvetica, sans-serif;
+font-size: 20;
+font-style: oblique;
+font-weight: bold;
+color:springgreen;
+}
+
+#wet{
+    font-size: 20;
+    text-decoration: steelblue;
+}
+
+p{
+    font-family: cursive;
+}
+
+h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#h1p{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+.table1{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin:0px auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.topnav {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color:white;
+    overflow: hidden;
+    }
+    .topnav a {
+    float: left;
+    display: block;
+    color:black;
+    text-align: center;
+    padding: 20px 20px 50px 20px;
+    text-decoration:salmon;
+    font-size: 17px;
+    }
+    .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    }
+
+#About{
+align-items: left;
+}
+
+a{
+    color: yellow;
+}
