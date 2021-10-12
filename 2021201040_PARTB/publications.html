@@ -1,0 +1,90 @@
+<head>
+    <script src="jquery.min.js"></script>
+    <link rel="icon" href="images/logo.jpg" type="image/x-icon"/>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+<script src="jquery-3.5.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <title>
+        Software Engineering Research Center
+    </title>
+    <div id="top">
+        <h1 id="head">Software Engineering Research Center</h1>
+    </div>
+    <nav class="menu_open navbar_nav">
+      <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+      <a href="people.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="focus.html">Focus Areas</a>
+      <a href="contact.html">Contact</a>	
+      <a href="resources.html">Resources</a>	
+      </div>
+      </nav>
+</head>
+<body>
+  <ul id="books"></ul>
+</body>
+
+<script>
+  $(document).ready(function() {
+
+
+          $('#books').empty();       
+
+          $.ajax({
+              type: 'GET',
+              url: 'https://dblp.org/pid/r/RaghuReddy.xml',           
+              dataType: 'xml',    
+              success: function(xml) {
+                  $(xml).find('r').each(function() {
+                      
+                     
+                      $('#books').append(
+                          '<div><h2>Raghu Reddy</h2>' +
+                              '<div><b>Title: </b>' +
+                                  $(this).find('title').text() + '</div> ' +
+                              '<div><b>Year: </b>' +
+                                  $(this).find('year').text() + '</div> ' +
+                              '<div><b>Url: </b>' +
+                                  $(this).find('url').text() + '</div> ' +
+                          '</div><br>');
+                  });
+              }
+          });
+          $.ajax({
+              type: 'GET',
+              url: ' https://dblp.org/pid/03/4045.xml',           
+              dataType: 'xml',    
+              success: function(xml) {
+                  $(xml).find('r').each(function() {
+                      
+                     
+                      $('#books').append(
+                          '<div><h2>Vasu Varma</h2>' +
+                              '<div><b>Title: </b>' +
+                                  $(this).find('title').text() + '</div> ' +
+                              '<div><b>Year: </b>' +
+                                  $(this).find('year').text() + '</div> ' +
+                              '<div><b>Url: </b>' +
+                                  $(this).find('url').text() + '</div> ' +
+                          '</div><br>');
+                  });
+              }
+          });
+
+         
+
+  });
+</script>
+
+<footer>
+    <div>
+      <nav class="menu">
+        <p id="foot">© 2021 Software Engineering Research Center (SERC), IIIT-Hyderabad.</p>
+        <input type="button" class="button" value="ADMIN MODE" onclick="ams(this)"/>
+        </nav>
+    </div>
+</footer>

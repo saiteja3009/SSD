@@ -1,0 +1,77 @@
+<head>
+    <script src="jquery.min.js"></script>
+    <link rel="icon" href="images/logo.jpg" type="image/x-icon"/>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+    <title>
+        Software Engineering Research Center
+    </title>
+    <div id="top">
+        <h1 id="head">Software Engineering Research Center</h1>
+    </div>
+    <nav class="menu_open navbar_nav">
+      <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+      <a href="people.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="focus.html">Focus Areas</a>
+      <a href="contact.html">Contact</a>	
+      <a href="resources.html">Resources</a>	
+      </div>
+      </nav>
+</head>
+<body>
+    <div id="resources">
+        <h2>RESOURCES</h2>
+        <p>Welcome to SERC resources wiki.</p>
+        <ol type="1">
+          <li><a href="pro.html">Projects</a></li>
+          <li><a href="">Teaching</a></li>
+          <li><a href="">Demos</a></li>
+          <li><a href="">Dataset</a></li>
+          <li><a href="rd.html">R & D Posters</a></li>
+        </ol>
+      </div>
+</body>
+<footer>
+    <div>
+      <nav class="menu">
+        <p id="foot">© 2021 Software Engineering Research Center (SERC), IIIT-Hyderabad.</p>
+        <input type="button" class="button" value="ADMIN MODE" onclick="ams(this)"/>
+        </nav>
+    </div>
+</footer>
+<script>
+  let edit = document.getElementById("edit");
+let main = document.getElementById("About");
+let changesform = document.getElementById("form");
+edit.style.display="none";
+changesform.style.display="none";
+
+function ams(x){
+  if(x.getAttribute("value") == "ADMIN MODE"){
+    x.setAttribute("value","NORMAL MODE");
+    edit.style.display="block";
+  }
+  else{
+    x.setAttribute("value","ADMIN MODE");
+    changesform.style.display="none";
+    main.style.display="block";
+    edit.style.display="none";
+  }
+}
+
+function hm(){
+  main.style.display="none";
+  changesform.style.display="block";
+  document.getElementById("ed").value = document.getElementById("cs").innerHTML;
+}
+function hs(){
+  document.getElementById("cs").innerHTML= document.getElementById("ed").value;
+  changesform.style.display="none";
+  main.style.display="block";
+}
+</script>

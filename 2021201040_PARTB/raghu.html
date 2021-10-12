@@ -1,0 +1,89 @@
+<head>
+    <script src="jquery.min.js"></script>
+    <link rel="icon" href="images/logo.jpg" type="image/x-icon"/>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+    <title>
+        Software Engineering Research Center
+    </title>
+    <div id="top">
+        <h1 id="head">Software Engineering Research Center</h1>
+    </div>
+    <nav class="menu_open navbar_nav">
+      <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+      <a href="people.html">People</a>
+      <a href="publications.html">Publications</a>
+      <a href="focus.html">Focus Areas</a>
+      <a href="contact.html">Contact</a>	
+      <a href="resources.html">Resources</a>	
+      </div>
+      </nav>
+</head>
+<body>
+  <div id="About">
+      <h1>Raghu Reddy</h1>
+      <input value="edit" id="edit" type="button" onclick="hm()">
+      <img id="allimg" src="images/raghu.jpg">
+      <h2>About</h2>
+      <p id="cs">Dr. Y. Raghu Reddy works as an Associate Professor at International Institute of Information Technology, Hyderabad, India. His specialization is in Software Engineering. His primary research interests are in design and construction of complex software systems. He has published number of peer reviewed publications in these areas. He has also published a book titled: Aspect oriented software development: An approach to composing UML design models in 2009. He is a part of several national and international conference committees.
+
+        He is Currently the Head of the Software Engineering Research Center (SERC) at IIIT-Hyderabad and the CA Technologies Endowed Faculty Chair at IIIT Hyderabad. He was previously the IIIT lead for CA Technologies - IIIT Hyderabad Innovation Center established at CA Technologies, Gachibowli, Hyderabad.
+        
+        In his previous life, Dr. Reddy worked as an Assistant professor with the Department of Software Engineering at Rochester Institute of Technology (RIT), USA. He played a major role in building the Software Engineering Master’s program at RIT. He developed and taught courses at the undergraduate and graduate level. Earlier, he worked as an Instructor at Colorado State University. He obtained his Ph.D. in Computer Science from Colorado State University, Fort Collins, USA.
+        
+        During his tenure as a researcher he has worked on projects with MHRD, CA Technologies, Nokia Inc., Alstom Signaling Inc., TCN Telecom Consulting Group, QWest Communications, etc.</p>
+      <h2>Research interests</h2>
+      <p>Model Driven Development<br>
+        Software Requirements and Architecture<br>
+        Verification & Validation<br>
+        Usability and Software engineering education</p>
+  </div>
+  <div id="form">
+    <textarea rows="20" cols="50" id="ed"></textarea>  
+    <input type="button" id="sc" value="save" onclick="hs()">        
+</div>
+</body>
+<footer>
+    <div>
+      <nav class="menu">
+        <p id="foot">© 2021 Software Engineering Research Center (SERC), IIIT-Hyderabad.</p>
+        <input type="button" class="button" value="ADMIN MODE" onclick="ams(this)"/>
+        </nav>
+    </div>
+</footer>
+<script>
+  let m = document.getElementById("About");
+  let c = document.getElementById("form");
+  let e = document.getElementById("edit");
+  e.style.display="none";
+  c.style.display="none";
+  
+  function hm(){
+    m.style.display="none";
+    c.style.display="block";
+    document.getElementById("ed").value = document.getElementById("cs").innerHTML;
+  }
+  
+  function ams(x){
+    if(x.getAttribute("value") == "ADMIN MODE"){
+      x.setAttribute("value","NORMAL MODE");
+      e.style.display="block";
+    }
+    else{
+      x.setAttribute("value","ADMIN MODE");
+      c.style.display="none";
+      m.style.display="block";
+      e.style.display="none";
+    }
+  }
+  
+  function hs(){
+    document.getElementById("cs").innerHTML= document.getElementById("ed").value;
+    c.style.display="none";
+    m.style.display="block";
+  }
+  </script>
